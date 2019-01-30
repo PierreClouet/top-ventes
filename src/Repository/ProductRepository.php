@@ -55,7 +55,7 @@ class ProductRepository extends ServiceEntityRepository
             JOIN product AS p ON oi.product_id = p.id
             JOIN category AS c ON c.id = p.category_id
             GROUP BY p.id, c.name
-            ORDER BY c.name ASC, price DESC
+            ORDER BY c.name ASC, qty DESC, price DESC
         ');
 
         if ($req->execute()) {
