@@ -1,18 +1,14 @@
-# Compte rendu projet SF 4 - Baptiste DECHERF
+# Compte rendu projet Top ventes
 
 ## Initialisation du projet
 
-``git clone git@github.com:bapdecherf59/sf.git``
-
 Modifier le fichier '.env' pour que la ligne commençant par 'DATABASE_URL' corresponde à votre BDD.
 
-``composer install``
+``$ composer install``
 
-``php bin/console doctrine:database:create``
+``$ php bin/console doctrine:database:create``
 
-``php bin/console doctrine:migrations:migrate``
-
-Note : Répondre "Oui" à la question
+``$ php bin/console doctrine:migrations:migrate``
 
 ## Exécution du projet
 
@@ -20,11 +16,9 @@ Si vous souhaitez modifier le jeu de test par défaut, modifiez le fichier './sr
 
 Ce jeu de test génère des catégories, produits et commandes aléatoirement, il se peut donc qu'il existe aucun produit dans certaines catégories ou aucun produit dans les commandes.
 
-``php bin/console doctrine:fixtures:load``
+``$ php bin/console doctrine:fixtures:load``
 
-Note : Répondre "Oui" à la question
-
-``php bin/console export-csv``
+``$ php bin/console export-csv``
 
 Le fichier ".csv" est alors généré dans "./public/export_janine.csv".
 
